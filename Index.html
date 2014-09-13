@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hult International Carousel</title>
+<link rel="stylesheet" type="text/css" href="css/text.css">
+</head>
+
+<body>
+
+<h2>Examples:</h2>
+<p>
+<ol>
+    <li><a href="One.html" alt="no script" target="_blank">Single Column</a></li>
+    <li><a href="Two.html" alt="no script" target="_blank">Two Columns</a></li>
+    <li><a href="Three.html" alt="no script" target="_blank">Three Columns</a></li>
+    <li><a href="Four.html" alt="no script" target="_blank">Four Columns</a></li>
+    <li><a href="NoScript.html" alt="no script" target="_blank">No script example</a></li>
+</ol>
+</p>
+
+<h2>Tools used:</h2>
+<p>
+<ol>
+    <li><a href="http://www.sublimetext.com" alt="Sublime Editor" target="_blank">Sublime Editor</a></li>
+        <li><a href="http://www.jslint.com/" alt="JS Lint" target="_blank">JS Lint</a></li>
+    <li><a href="http://validator.w3.org/" alt="W3C Validator" target="_blank">W3C Validator</a></li>
+</ol>
+</p>
+
+
+<h2>Potential Improvements:</h2>
+<p>
+<ol>
+    <li>I have a more robust plugin template, however it seemed overkill for this basic example.</li>
+    <li>Definitely could add more features in the way of public methods.</li>
+    <li>Include touch screen support.</li>
+    <li>Lazy load images for large carousels.</li>
+     <li>Add paging or bullets below slides.</li>   
+</ol>
+</p>
+
+<h2>Theory Questions for the position of Senior Web Developer</h2>
+
+<p><strong>What is the difference between == and ===?</strong></p>
+<p>The difference between '==' and '===' is that the latter requires that in order to be true the values being compared must be of the same type and value.  For example with '==' the browser will attempt to convert a string into a number prior to the comparison.  With '===' no conversion will occur.  To ensure predictable results it is better to use '===' when comparing values of the same type.</p>
+
+<p><strong>Define Null, undefined and undeclared:</strong></p>
+<p><strong>Null</strong> : The absence of a value.<br>
+  <strong>Undefined</strong>: A variable that has not been initialised.<br>
+  <strong>Undeclared</strong>: Variables are declared with the var keyword.  A variable that has not been declared in this manner becomes a property of the default global object.
+</p>
+
+<p>
+
+<strong>What is the difference between call and apply: </strong>
+<br>
+<br>
+The key difference is that 'apply' lets you invoke the function with arguments as an array; 'call' requires the parameters be listed explicitly. </p>
+
+<p><strong>What does 'use strict' mean?
+</strong>
+<p>Strict mode identifies errors that would often go unnoticed if it was omitted.  It is used as follows:
+<p>"use strict";</p> and can be applied to either the entire scope of an application or singular functions.  This is an incredibly useful language feature aimed at writing better code.  Disadvantage: Not all browsers support strict mode.
+</p>
+
+<p><strong>Why would you want to normalise  CSS?
+</strong></p>
+<p>Normalise means to  reset a style sheet which involves providing a consistent baseline across all browsers for handling things like line heights, margins, headings etc.   I’ve been using Eric Meyer’s Reset for years in all of my CSS. </p>
+
+<p>
+
+<strong>Box Model</strong>:  The box model is one of the fundamentals of web design, as every page element is a rectangular box.  Appreciation of the box model allows us to effectively calculate the width and height of an element:
+
+<p>Width: width + padding-left + padding-right + border-left + border-right</p>
+
+<p>Height: height + padding-top + padding-bottom + border-top + border-bottom</p>
+<p>In short the box-model is the sum of an elements content + padding + borders. </p>
+<p>In CSS3 we are introduced to a property call Box-Sizing. This is an amazing property that works across all major browsers including IE8! JQuery also plays well with this property. Here is an example:</p>
+<p>I almost always put this into the top of my main css file: </p>
+<pre>html {    box-sizing: border-box;  } <br>*, *:before, *:after {    box-sizing: inherit;  }  </pre>
+<p> particularly when developing responsive layouts (pretty much always nowadays). For example without the above css...</p>
+<p>.boxy {<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 5px solid black;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:10px;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:150px;<br>
+}</p>
+<p>...would result in the  'boxy' class having a total width of 180px. So what is the big deal? Nothing until you start dealing with percentage widths and want pixel margins in between each element. Then floats slip into chaos as the screen is resized, not desirable. So, 'border-box' would result in the 'boxy' class having a total width of 150px. That is because the padding and the border are calculated as part of the total width. This also works for percentages. However, not for margins. So to create the margin effect we can nest our divs and create a margin effect by adding padding to our outer div. In practice this is a lifesaver for countering the standard behaviour of width and padding which proceeded responsive design. </p>
+<p><strong>Name five new features that CSS3 offers.</strong></p>
+<p>My most used CSS3 feature  is box-sizing which I have already mentioned   above. Below are five additional CSS3 features:</p>
+<p>1. CSS Animations and Transitions - Available in all major browsers, even IE (since version 10). Two ways to create CSS animations: The first is by changing CSS properties with the <strong>transition</strong> declaration, the second involves the description of specific moments of the animation with the @keyframe rule.<br>
+</p>
+<p>2. calc() Supported in IE9 and above. It allows you to do arithmetic calculations in CSS. Best of all you can mix different units, like percentages and pixels. E.g. width: calc(100% - 30px);</p>
+<p>3. Advanced Selectors are supported in IE9 and up. For example instead of styling via class we can:</p>
+<p>p::first-letter{color: #FF0;}</p>
+<p>p::first-line{ font-size: 18px;} </p>
+<p>/* Make the first and last element purple. */</p>
+<p> .elem:first-child,<br>
+  .elem:last-child{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:#948bd8;<br>
+}</p>
+<p>/* Make every other element rounded */</p>
+<p>.elem:nth-child(odd){<br>
+border-radius:50%;<br>
+}</p>
+<p>4. CSS3 allows multiple backgrounds to be applied to elements. Then with script or CSS pseudo-classes we can animate those backgrounds independently of each other.</p>
+<p>5. Gradients (IE10+). Prior to CSS3 background gradients were achieved using images created in image editors such as Photoshop, although technically it was possible to emulate the same effect with JavaScript. Now gradients are as simple as one single line of CSS:</p>
+<p>.el1{<br>
+background:linear-gradient(to bottom, #8dd2d9 , #58c0c7);<br>
+}</p>
+<p>.el2{<br>
+  background:radial-gradient(#77d19e,#46c17b);<br>
+  }</p>
+<p>Other worthy mentions:</p>
+<p>6. Webfonts are so important as they allow fonts to be delivered to the browser overcoming the limitation of a handful of &quot;web-safe&quot; fonts. They are widely supported across all modern browsers from IE9 onwards with partial support in IE8.</p>
+<p><strong>How can we be sure that a CSS3 feature is compatible with our baseline browser?</strong></p>
+<p>Easy: Go to caniuse.com: <a href="http://caniuse.com/#feat=multicolumn" target="blank">http://caniuse.com/#feat=multicolumn</a></p>
+<p><strong>Describe: Block, Inline and Inline-block.</strong></p>
+<p><strong>Block</strong> elements always appear on a new line.  E.g. h1, p
+  <br>
+  <strong>Inline</strong> elements do not start on a new line and include b,em,img
+  <br>
+  <strong>Inline-block</strong>: Provides a way to make elements inline whilst preserving their block capabilities such as margins and padding.
+</p>
+<p><strong>What is the key difference between get and post methods?</strong></p>
+<p>
+  
+  <strong>Get</strong>: Sends name value pairs via the URL:
+  
+  /test/demo_form.asp?name1=value1&name2=value2 – Advantage of get is that it can be bookmarked.
+  
+  <br>
+  <strong>Post</strong>: Sends data via the Http body.  Advantage: Data is not displayed in the URL, this is more secure as the values are not stored in the browsers history.
+</p>
+<p><strong>What is the purpose of the data- attribute?</strong></p>
+
+<p>
+
+<strong>data-</strong> attribute allows developers data to be assigned to page elements, without affecting layout or presentation.  E.g  data-name=”David Carty”
+
+</p>
+<p><strong>What does progressive enhancement mean?</strong></p>
+<p>Pages are designed that start from a baseline that is accessible to the minimum supported web browser. The page is then enhanced to include more functionality for browsers that are capable of supporting richer features. In addition, best practices are applied so that all pages contain valid HTML that is semantically correct so that the widest variety of user agents can view the page. Most importantly behaviours are added using external script. Whilst these scripts are written to take advantage of browser support, they should not deny access if script or feature support is unavailable. </p>
+<p><strong>How do you detect a specific web browser?</strong></p>
+<p>You don't, browser sniffing is now redundant, now that we have Modernizr we detect features supported by the user agent as opposed to the navigator.userAgent which serves to identify the browser.</p>
+
+
+<p><strong>Does JavaScript pass by Value or by Reference?</strong></p>
+<p>Strings, numbers, Booleans are all passed by value. This means that any changes to that variable while in the  function are completely separate from anything that happens outside of the function. Objects, however, are passed by reference.</p>
+<p><strong>How can we handle exceptions in JavaScript?</strong></p>
+<p>We do this with a combination of the 'try' and 'catch' and 'finally' statements.</p>
+<p>try {<br>
+    <em>Block of code to try<br>
+</em>}<br>
+catch(err) {<br>
+    <em>Block of code to handle errors<br>
+</em>} <br>
+finally {<br>
+      <em>Block of code to be   	executed regardless of the try / catch result<br>
+</em>}</p>
+<p>We can however extend this to include custom errors through the use of the throw statement:</p>
+<p>      try { <br>
+            if(x == "") throw "is Empty";<br>
+            if(isNaN(x)) throw "not a number";<br>
+            if(x &gt; 10) throw "too high";<br>
+            if(x &lt; 5) throw "too low";<br>
+      }<br>
+        catch(err) {<br>
+          message.innerHTML =   "Input " + err;<br>
+    }</p>
+<p><strong>What does 'this' refer to in JavaScript?</strong></p>
+<p>'this' is a keyword that is used as shorthand to refer to an objects context. For example:</p>
+<pre>function doSomething() {<br>	this.style.color = '#cc0000';
+}
+</pre>
+
+<p>So 'this' does not refer to 'doSomething()' but instead to the owner of 'doSomething()', 'this' refers to the object that contains the function 'doSomething()'.  </p>
+<p><strong>What is closure?</strong></p>
+<p>A closure is an inner function that has access to the outer (enclosing) function's variables - scope chain. The closure itself has three scope chains: It has access to its own scope (variables defined between its curly brackets), it has access to the outer function's variables and it has access to the global variables. Through the concept of scope it encapsulates code, preventing variable collision.</p>
+<p><strong>Explain JavaScript Prototype</strong></p>
+<p>Every object is linked to a prototype object from which it can inherit properties. All objects created from object literals are linked to Object.prototype, an object that comes standard with JavaScript.</p>
+<p>When you make a new object you can select the object that should be its prototype. Douglas Crockford in his book JavaScript The Good Parts (ISBN: 978-0-596-51774-8) suggest a function that creates a new object that uses an old object as its prototype:</p>
+<p>if (typeof Object.create !== 'function') {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Object.create = function (o) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var F = function () {};<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F.prototype = o;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new F();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+<p>var another_stooge = Object.create(stooge);</p>
+<p>The prototype link has no effect on updating. When	we make a change to an object, the object's prototype is not touched.</p>
+<p>another_stooge['first-name'] = 'Harry';<br>
+another_stooge['last-name'] = 'Smith';<br>
+</p>
+<p>It is useful to appreciate the dynamic relationship that the new object maintains with the parent that it originated from.  If a new property is added to a prototype, that property will immediately be visible to all objects that are based on that prototype:</p>
+<p>stooge.profession = &quot;artist&quot;;<br>
+another_stooge.profession  //default value 'artist'.</p>
+<p><strong>How can you analyse performance in the browser?</strong></p>
+<p>I am familiar with both Chrome developers tools and Firebug for Firefox.  So, if we consider Firebug information about network traffic is readily available under the Net tab. </p>
+<p><strong>Name two version control systems?</strong></p>
+<p>Why two? Now that we have Git its a done deal. </p>
+<p><strong>Has SEO become harder or easier?</strong></p>
+<p>I remember when SEO was automated by WebPosition Gold from  First Place Software. It generated landing pages, submitted sites to 1,000+  search engines and directories and encouraged black hat practices such as link  exchange with almost anyone, the result a page one ranking. Then, and not too  long ago, it became apparent a 'relevant' domain name, irrespective of the  content could guarantee high search engine visibility. That was a very easy  time, particularly if you had a bunch of keyword rich domains, like I did. Nowadays  &quot;holidaycottagesnorthwales.com&quot; is not certain of a first page  position for the phrase &quot;holiday cottages north wales&quot;. So SEO has  definitely become harder. This is mainly due to advances in Google&rsquo;s search  algorithm whose core purpose is to:</p>
+<p>1. Disqualify all sites that aren't relevant.<br>
+2. Locate sites that not only consider the web surfer's choice of phrase, but also intent.<br>
+  3. Of the sites that are relevant rank them in order of importance.</p>
+<p>The first major changes to Google's algorithm came from '<strong>Panda</strong>'. It was an addition to the existing algorithm and was tasked with eliminating low-quality or thin on information sites, in favour   of those with in-depth regularly updated content. Panda also tackled sites where commercial gain was clearly prioritized over user experience. </p>
+<p>In 2011 Google provided its own insight into quality of content: <a href="http://googlewebmastercentral.blogspot.co.uk/2011/05/more-guidance-on-building-high-quality.html" target="_blank">http://googlewebmastercentral.blogspot.co.uk/2011/05/more-guidance-on-building-high-quality.html</a>. This answered a lot of questions with regards to Google's direction. </p>
+<p>In April 2012 Google updated its algorithm with '<strong>Penguin</strong>'.  Penguin's primary objective was to analyse links: This included establishing bought links, irrelevant link exchanges and thin content domains that appeared to be establish purely for the purpose of creating backwards links. </p>
+<p>In late 2013 Google announced <strong>Hummingbird</strong> (a reference to  how fast and accurate these birds are). At its core Hummingbird interprets not  just keyword relevance, but also context and aims to search in a more natural  way, in addition there is also a focus on mobile content. Websites that are  designed for all devices are given additional credit, but will only be awarded  a top spot if the other parts of the equation also come together. SEO is now  more of a precision task than ever before, a task that constantly needs to be  revisited in order to maintain position. </p>
+<p>In short my SEO strategy focuses on:</p>
+<p>Quality of content, authority and most importantly what is in it for the visitor? Social media, guest blogging and an investment in Google+ all appear to significantly contribute to positioning. With Google considering sites that are commercially motivated more suitable candidates for PPC and therefore more frequently than ever before being excluded from organic results. Finally, if a site fails to make an impact with Google it should be no surprise that its visibility on the other search engines will also be limited. This is because other search engines constantly compare their results against Google and often adjust accordingly. </p>
+
+
+</body>
+</html>

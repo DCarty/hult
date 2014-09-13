@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html id="carousel-test" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1" name=
+    "viewport">
+    <title>Hult International Carousel Test</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">															
+</head>
+<body>
+
+<div class="example">
+
+<div id="div-carousel" class="HultCarousel">
+
+<h1>Fine Watch Selection</h1>
+
+<div class="wrapper">
+    <ul class="tablet-carousel">
+        <li><div class="slide"><img alt="watch 1" src="Images/001.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li>
+        <li><div class="slide"><img alt="watch 2" src="Images/002.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li>
+        <li><div class="slide"><img alt="watch 3" src="Images/003.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li>
+        <li><div class="slide"><img alt="watch 4" src="Images/004.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li>
+        <li><div class="slide"><img alt="watch 5" src="Images/005.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li>
+        <li><div class="slide"><img alt="watch 6" src="Images/006.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li>
+        <li><div class="slide"><img alt="watch 9" src="Images/009.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li> 
+        <li><div class="slide"><img alt="watch 10" src="Images/010.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li>                   
+    </ul>
+</div>
+</div>
+
+</div> <!--End example-->
+
+<div class="example">
+
+<div id="div-carousel2" class="HultCarousel">
+
+<h1>Fine Watch Selection 2</h1>
+
+<div class="wrapper">
+    <ul class="tablet-carousel">
+        <li><div class="slide"><img alt="watch 7" src="Images/007.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li> 
+        <li><div class="slide"><img alt="watch 8" src="Images/008.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li> 
+        <li><div class="slide"><img alt="watch 9" src="Images/009.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li> 
+        <li><div class="slide"><img alt="watch 10" src="Images/010.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li> 
+        <li><div class="slide"><img alt="watch 11" src="Images/011.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li> 
+        <li><div class="slide"><img alt="watch 12" src="Images/012.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li> 
+        <li><div class="slide"><img alt="watch 11" src="Images/001.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li> 
+        <li><div class="slide"><img alt="watch 12" src="Images/013.jpg"><div class="desc">A timeless classic: Faux alloy finish, splash resistant, shudder proof.</div></div></li> 
+       
+    </ul>
+</div>
+</div>
+
+</div> <!--End example-->
+<div class="mask">Loading...</div>
+<div class="mask">Loading...</div>
+<script src=
+    "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="JS/jquery.carousel.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#div-carousel').HultCarousel(1,true);
+			$('#div-carousel2').HultCarousel(1,false);
+		});
+	</script>
+
+</body>
+</html>
