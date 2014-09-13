@@ -1,5 +1,5 @@
-hult
-====
+hult International
+==================
 
 JavaScript Test: Create a carousel with minimal amounts of CSS/Code.
 
