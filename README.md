@@ -8,3 +8,5 @@ It should support multiple instances on a single page.
 It should work via a timer or right/left click event.
 It must be circular.
 It must be responsive.
+
+For demo see: http://www.davidcarty.co.uk/hult
